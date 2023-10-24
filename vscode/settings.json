@@ -1,0 +1,102 @@
+{
+    "workbench.fontAliasing": "antialiased",
+    "workbench.colorTheme": "paddy-frost-upright",
+    "security.workspace.trust.untrustedFiles": "open",
+    "notebook.lineNumbers": "on",
+    "zenMode.centerLayout": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.enabled": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideTabs": false,
+    "workbench.startupEditor": "none",
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.startupPrompt": "never",
+    "security.workspace.trust.enabled": false,
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "C_Cpp.autocomplete": "disabled",
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "html.autoClosingTags": false,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.cursorSurroundingLines": 14,
+    "editor.codeLens": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "todohighlight.include": [
+
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss"
+    ],
+    "todohighlight.defaultStyle": {
+
+
+    },
+    "todohighlight.keywords": [
+        "TODO",
+        "FIXME",
+        "DAFUQ",
+        "DANGER",
+        "NOTE"
+    ],
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/node_modules": true,
+        "**/release": true
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false
+    },
+    "editor.tabSize": 3,
+    "todohighlight.exclude": [
+
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/dist/**",
+        "**/build/**",
+        "**/.vscode/**",
+        "**/.github/**",
+        "**/_output/**",
+        "**/*.min.*",
+        "**/*.map",
+        "**/.next/**"
+    ],
+    "search.exclude": {
+        "**/dist": true,
+        "**/dist-electron": true,
+        "**/release": true,
+        "**/release/**/*": true
+    },
+    "files.watcherExclude": {
+        "**/__pycache__": true
+    },
+    "omnisharp.projectFilesExcludePattern": "**/node_modules/**,**/.git/**,**/bower_components/**,**/__pycache__/**",
+    "python.formatting.autopep8Args": [
+        "--indent-size=3",
+        "--ignore E121"
+    ],
+    "python.formatting.provider": "black",
+    "python.linting.mypyArgs": [
+        "--follow-imports=silent",
+        "--show-column-numbers",
+        "--no-pretty",
+        "--strict"
+    ],
+    "python.linting.mypyEnabled": true,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "window.dialogStyle": "custom",
+    "window.menuBarVisibility": "toggle",
+    "editor.fontFamily": "'Droid Sans Mono', monospace",
+    "editor.fontSize": 16,
+    "editor.unicodeHighlight.nonBasicASCII": false
+}
