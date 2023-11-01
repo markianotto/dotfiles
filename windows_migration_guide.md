@@ -3,6 +3,18 @@
    - Activate wsl: search for "Windows Features" in windows menu 
    - assure that "Windows Subsystem for Windows" checkbox is checked.
    - restart computer `shutdown /s /f /t 0`
+2. install wsl
+   - install wsl over Microsoft store
+   - enable hyper-v: 
+      - run in powershell: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All`,
+      - or run in CMD: `DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V`,
+      - or [follow this guide](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#enable-hyper-v-using-powershell).
+   - enable linux subsystem
+   - assure all windows updates are installed
+   - run `wsl -v` if you're on 1 then run `wsl --install`
+   - [download & install Arch](https://github.com/yuk7/ArchWSL)
+      - download & extract, run Arch.exe, install arch and run Arch.exe again.
+      - as super user run: `pacman-key --init && pacman-key --populate && pacman -Sy archlinux-keyring && pacman -Su`.
 2. [Install chocolatey](https://chocolatey.org/install)
 3. run the following script to install some common apps:
 ```
