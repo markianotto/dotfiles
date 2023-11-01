@@ -1,6 +1,6 @@
 {
     "workbench.fontAliasing": "antialiased",
-    "workbench.colorTheme": "paddy-frost-upright",
+    "workbench.colorTheme": "paddy-mist",
     "security.workspace.trust.untrustedFiles": "open",
     "notebook.lineNumbers": "on",
     "zenMode.centerLayout": false,
@@ -98,5 +98,6 @@
     "window.menuBarVisibility": "toggle",
     "editor.fontFamily": "'Droid Sans Mono', monospace",
     "editor.fontSize": 16,
-    "editor.unicodeHighlight.nonBasicASCII": false
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "window.zoomLevel": 1
 }
