@@ -11,10 +11,12 @@ choco install 7zip androidstudio filezilla firefox gimp irfanview keepass krita 
 4. Manually install Visual Studio 2019, 2022 and other versions as needed.
    - Go to Extensions in top menu, install the "Hide Main Menu" extension
 6. Copy over ssh keys from `/home/<USER_NAME>/.ssh` and `C:\Users\<USER_NAME>\.ssh`.
-7. Copy Z folder. Z should contain keepass database.
+7. Copy Z folder. 
    - mount the network drive `sudo mount -t cifs //server/share /mnt/mountpoint -o username=your_username,password=your_password`
    - or, copy via rsync and ssh
    - Add Folder Icons, add folders to `Quick access` in File Explorer.
+   - bfg, procexp, java SDKs and stuff should be located in `Z:\bin`
+   - keepass database located in `Z:\data`
 8. install apps in Linux WSL
    - sudo pacman -Syu ranger fish apt nvim ruby python
    - [install gitui](https://github.com/extrawurst/gitui/releases)
