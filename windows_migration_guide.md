@@ -6,7 +6,7 @@
 2. [Install chocolatey](https://chocolatey.org/install)
 3. run the following script to install some common apps:
 ```
-choco install 7zip androidstudio filezilla firefox gimp irfanview keepass krita nodejs openvpn python ruby sumatrapdf sql-server-management-studio vlc -y
+choco install 7zip androidstudio filezilla firefox gimp irfanview keepass krita nodejs openvpn procexp python ruby sumatrapdf sql-server-management-studio vlc -y
 ```
 4. Manually install Visual Studio 2019, 2022 and other versions as needed.
    - Go to Extensions in top menu, install the "Hide Main Menu" extension
@@ -14,6 +14,7 @@ choco install 7zip androidstudio filezilla firefox gimp irfanview keepass krita 
 7. Copy Z folder. Z should contain keepass database.
    - mount the network drive `sudo mount -t cifs //server/share /mnt/mountpoint -o username=your_username,password=your_password`
    - or, copy via rsync and ssh
+   - Add Folder Icons, add folders to `Quick access` in File Explorer.
 8. install apps in Linux WSL
    - sudo pacman -Syu ranger fish apt nvim ruby python
    - [install gitui](https://github.com/extrawurst/gitui/releases)
