@@ -372,7 +372,7 @@
         "when": "findJumpActive"
     },
     {
-        "key": "ctrl+alt+;",
+        "key": "ctrl+u",
         "command": "toggleFindInSelection",
         "when": "editorFocus"
     },

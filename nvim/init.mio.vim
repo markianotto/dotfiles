@@ -14,7 +14,7 @@
 "
 "
 
-let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore --hidden --follow --glob "!{node_modules,__pycache__}"'
+let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore --hidden --follow --glob "!{node_modules,__pycache__,target}"'
 
 "" autocmd BufEnter * let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore --hidden --follow ' . systemlist('cat .fzfignore | xargs -I {} echo --glob "!{}" | tr -d "\n"')[0]
 
@@ -23,6 +23,8 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
+let g:coc_node_path = '/usr/bin/node'
 
 call plug#begin()
 " Themes

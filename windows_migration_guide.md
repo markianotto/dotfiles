@@ -18,10 +18,15 @@
 2. [Install chocolatey](https://chocolatey.org/install)
 3. run the following script to install some common apps:
 ```
-choco install 7zip androidstudio filezilla firefox git gimp irfanview keepass krita nodejs openvpn procexp python ruby sumatrapdf sql-server-management-studio vlc vscode -y
+choco install 7zip androidstudio filezilla firefox git gimp irfanview krita nodejs openvpn procexp python ruby sumatrapdf sql-server-management-studio vlc vscode -y
 ```
+3. b) Manually install KeepassXC from web installer. Google it.
 4. Manually install Visual Studio 2019, 2022 and other versions as needed.
    - Go to Extensions in top menu, install the "Hide Main Menu" extension
+   - Copy `visual_studio_2022/CurrentSettings.vssettings` into `C:\Users\<USER_NAME>\AppData\Local\Microsoft\VisualStudio\<VERSION_NUMBER>.0_<VERSION_HASH>\Settings`
+   - Import `visual_studio_2022/CurrentSettings.vssettings` in Visual Studio 2022:
+      - press the Windows Key and type: `Developer Command Prompt for VS 2022`.
+      - execute the command in this shell: `Tools.ImportandExportSettings /import:Z:\code\dotfiles\visual_studio_2022\CurrentSettings.vssettings`.
 6. Copy over ssh keys from `/home/<USER_NAME>/.ssh` and `C:\Users\<USER_NAME>\.ssh`.
 7. Copy Z folder. 
    - mount the network drive `sudo mount -t cifs //server/share /mnt/mountpoint -o username=your_username,password=your_password`
@@ -53,7 +58,7 @@ choco install 7zip androidstudio filezilla firefox git gimp irfanview keepass kr
       Hex Editor
       JSON formatter
       Markdown PDF
-      Mark for VS Code
+      Marp for VS Code
       Pylance
       Python
       SFTP
