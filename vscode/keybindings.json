@@ -490,19 +490,133 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+s r",
+        "key": "alt+s alt+r",
         "command": "toggleSearchEditorRegex",
         "when": "inSearchEditor && searchInputBoxFocus"
     },
     {
-        "key": "alt+s w",
+        "key": "alt+s alt+w",
         "command": "toggleSearchEditorWholeWord",
         "when": "inSearchEditor && searchInputBoxFocus"
     },
     {
-        "key": "alt+s c",
+        "key": "alt+s alt+c",
         "command": "toggleSearchEditorCaseSensitive"
-    },   
+    },
+    {
+        "key": "alt+s alt+r",
+        "command": "toggleSearchRegex",
+        "when": "searchViewletFocus"
+    },
+    {
+        "key": "alt+r",
+        "command": "-toggleSearchRegex",
+        "when": "searchViewletFocus"
+    },
+    {
+        "key": "alt+s alt+r",
+        "command": "toggleFindRegex",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+r",
+        "command": "-toggleFindRegex",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+s alt+r",
+        "command": "workbench.action.terminal.toggleFindRegex",
+        "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+    },
+    {
+        "key": "alt+r",
+        "command": "-workbench.action.terminal.toggleFindRegex",
+        "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+    },
+    {
+        "key": "alt+r",
+        "command": "-toggleSearchEditorRegex",
+        "when": "inSearchEditor && searchInputBoxFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "-toggleSearchEditorWholeWord",
+        "when": "inSearchEditor && searchInputBoxFocus"
+    },
+    {
+        "key": "alt+s alt+w",
+        "command": "workbench.action.terminal.toggleFindWholeWord",
+        "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+    },
+    {
+        "key": "alt+w",
+        "command": "-workbench.action.terminal.toggleFindWholeWord",
+        "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+    },
+    {
+        "key": "alt+s alt+w",
+        "command": "toggleFindWholeWord",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "-toggleFindWholeWord",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+s alt+w",
+        "command": "toggleSearchWholeWord",
+        "when": "searchViewletFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "-toggleSearchWholeWord",
+        "when": "searchViewletFocus"
+    },
+    {
+        "key": "alt+s alt+c",
+        "command": "workbench.action.terminal.toggleFindCaseSensitive",
+        "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+    },
+    {
+        "key": "alt+c",
+        "command": "-workbench.action.terminal.toggleFindCaseSensitive",
+        "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+    },
+    {
+        "key": "alt+s alt+c",
+        "command": "toggleFindCaseSensitive"
+    },
+    {
+        "key": "alt+s alt+c",
+        "command": "toggleSearchCaseSensitive"
+    },
+    {
+        "key": "alt+h",
+        "command": "-testing.toggleTestingPeekHistory",
+        "when": "testing.isPeekVisible"
+    },
+    {
+        "key": "alt+h",
+        "command": "cursorColumnSelectDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+down",
+        "command": "-cursorColumnSelectDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+u",
+        "command": "cursorColumnSelectUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+up",
+        "command": "-cursorColumnSelectUp",
+        "when": "textInputFocus"
+    },
+    
     /*{
         "key": "alt+p d",
         "command": "editor.action.insertSnippet"
