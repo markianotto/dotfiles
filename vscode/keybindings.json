@@ -489,6 +489,20 @@
         "command": "-editor.action.insertCursorBelow",
         "when": "editorTextFocus"
     },
+    {
+        "key": "alt+s r",
+        "command": "toggleSearchEditorRegex",
+        "when": "inSearchEditor && searchInputBoxFocus"
+    },
+    {
+        "key": "alt+s w",
+        "command": "toggleSearchEditorWholeWord",
+        "when": "inSearchEditor && searchInputBoxFocus"
+    },
+    {
+        "key": "alt+s c",
+        "command": "toggleSearchEditorCaseSensitive"
+    },   
     /*{
         "key": "alt+p d",
         "command": "editor.action.insertSnippet"
