@@ -1,6 +1,5 @@
 {
    "workbench.fontAliasing": "antialiased",
-   "workbench.colorTheme": "paddy-mist",
    "security.workspace.trust.untrustedFiles": "open",
    "notebook.lineNumbers": "on",
    "editor.minimap.renderCharacters": false,
@@ -97,5 +96,13 @@
    "accessibility.signals.lineHasError": {
       "sound": "off"
    },
-   "zenMode.centerLayout": false
+   "zenMode.centerLayout": false,
+   "zenMode.fullScreen": false,
+   "workbench.colorTheme": "paddy-haze",
+   "[vue]": {
+      "editor.defaultFormatter": "Vue.volar"
+   },
+   "zenMode.hideStatusBar": false,
+   "editor.cursorBlinking": "solid",
+   "window.density.editorTabHeight": "compact"
 }

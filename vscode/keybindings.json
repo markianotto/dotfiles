@@ -335,11 +335,6 @@
         "when": "editorFocus"
     },
     {
-        "key": "alt+c",
-        "command": "-toggleSearchCaseSensitive",
-        "when": "searchViewletFocus"
-    },
-    {
         "key": "ctrl+f4",
         "command": "findJump.activate"
     },
@@ -588,10 +583,6 @@
         "command": "toggleFindCaseSensitive"
     },
     {
-        "key": "alt+s alt+c",
-        "command": "toggleSearchCaseSensitive"
-    },
-    {
         "key": "alt+h",
         "command": "-testing.toggleTestingPeekHistory",
         "when": "testing.isPeekVisible"
@@ -615,6 +606,38 @@
         "key": "ctrl+shift+alt+up",
         "command": "-cursorColumnSelectUp",
         "when": "textInputFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "relative-goto.goto"
+    },
+    {
+        "key": "alt+g",
+        "command": "-relative-goto.goto"
+    },
+    {
+        "key": "ctrl+k u",
+        "command": "references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "shift+alt+f12",
+        "command": "-references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "alt+y",
+        "command": "workbench.debug.action.toggleRepl",
+        "when": "workbench.panel.repl.view.active"
+    },
+    {
+        "key": "ctrl+shift+y",
+        "command": "-workbench.debug.action.toggleRepl",
+        "when": "workbench.panel.repl.view.active"
+    },
+    {
+        "key": "alt+f",
+        "command": "workbench.action.findInFiles"
     },
     
     /*{
