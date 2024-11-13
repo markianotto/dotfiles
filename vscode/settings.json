@@ -98,11 +98,12 @@
    },
    "zenMode.centerLayout": false,
    "zenMode.fullScreen": false,
-   "workbench.colorTheme": "paddy-haze",
+   "workbench.colorTheme": "paddy-mist",
    "[vue]": {
       "editor.defaultFormatter": "Vue.volar"
    },
    "zenMode.hideStatusBar": false,
    "editor.cursorBlinking": "solid",
-   "window.density.editorTabHeight": "compact"
+   "window.density.editorTabHeight": "compact",
+   "files.autoSave": "afterDelay"
 }

@@ -9,25 +9,6 @@
                 "directory": "/tmp/ccls"
              }
          }
-      },
-      "pyls": {
-         "command": "pyls",
-         "filetypes": ["python"],
-         "settings": {
-            "pyls": {
-               "configurationSources": ["flake8"],
-               "plugins": {
-                  "pyflakes": {
-                     "enabled": true
-                  },
-                  "pycodestyle": {
-                     "enabled": true,
-                     "hangClosing": false,
-                     "ignore": ["E111", "E114", "E302", "E114", "E501", "E303"]
-                  }
-               }
-            }
-         }
       }
    }
 }
