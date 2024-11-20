@@ -639,6 +639,10 @@
         "key": "alt+f",
         "command": "workbench.action.findInFiles"
     },
+    {
+        "key": "alt+; f",
+        "command": "editor.action.formatChanges"
+    },
     
     /*{
         "key": "alt+p d",
