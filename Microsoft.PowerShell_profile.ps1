@@ -4,7 +4,10 @@ $env:EDITOR = "nvim"
 
 Invoke-Expression (&starship init powershell)
 
-cd 'C:\code'
+# only switch dirs if we are in the default starting dir.
+if ($PWD.Path -eq "C:\WINDOWS\system32") {
+   Set-Location "C:\code"
+}
 
 # ASP.NET Core Configuration ==================================================
 $env:ASPNETCORE_ENVIRONMENT = "Development"
