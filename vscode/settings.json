@@ -10,7 +10,7 @@
    "security.workspace.trust.startupPrompt": "never",
    "security.workspace.trust.enabled": false,
    "[xml]": {
-      "editor.defaultFormatter": "redhat.vscode-xml"
+      "editor.defaultFormatter": "PrateekMahendrakar.prettyxml"
    },
    "C_Cpp.autocomplete": "disabled",
    "editor.autoClosingBrackets": "never",
@@ -105,5 +105,6 @@
    "zenMode.hideStatusBar": false,
    "editor.cursorBlinking": "solid",
    "window.density.editorTabHeight": "compact",
-   "files.autoSave": "afterDelay"
+   "files.autoSave": "afterDelay",
+   "window.newWindowDimensions": "maximized"
 }
