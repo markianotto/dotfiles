@@ -61,5 +61,23 @@ if exist "%DEST_FOLDER_ALACRITTY%\alacritty.toml" (
 
 mklink "%DEST_FOLDER_ALACRITTY%\alacritty.toml" "%REPO_PATH%\alacritty\alacritty.toml"
 
+
+set DEST_FOLDER_POWERSHELL_PROFILE=C:\Users\%USERNAME%\Documents\WindowsPowerShell
+
+mkdir %DEST_FOLDER_POWERSHELL_PROFILE%
+
+if not exist "%DEST_FOLDER_POWERSHELL_PROFILE%" (
+    echo Failed to create the directory for alacritty.
+    exit /b 1
+)
+
+if exist "%DEST_FOLDER_POWERSHELL_PROFILE%\Microsoft.PowerShell_profile.ps1" (
+    echo Link already exists: "%DEST_FOLDER_POWERSHELL_PROFILE%\Microsoft.PowerShell_profile.ps1"
+    echo Deleting existing link...
+    del "%DEST_FOLDER_POWERSHELL_PROFILE%\Microsoft.PowerShell_profile.ps1"
+)
+
+mklink "%DEST_FOLDER_POWERSHELL_PROFILE%\Microsoft.PowerShell_profile.ps1" "%REPO_PATH%\Microsoft.PowerShell_profile.ps1"
+
 echo Symbolic links created successfully.
 exit /b 0
