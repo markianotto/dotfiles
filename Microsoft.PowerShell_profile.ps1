@@ -79,7 +79,19 @@ function go {
     }
 }
 
+function sha256sum {
+    param (
+        [Parameter(Mandatory=$true)]
+        [string]$FilePath
+    )
 
+    if (Test-Path $FilePath) {
+        (Get-FileHash -Path $FilePath -Algorithm SHA256).Hash
+    } else {
+        Write-Host "Error: File '$FilePath' not found." -ForegroundColor Red
+        exit 1
+    }
+}
 
 if (Get-Command nvim -ErrorAction SilentlyContinue) {
    git config --global core.editor "nvim"
