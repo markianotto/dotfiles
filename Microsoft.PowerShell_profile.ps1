@@ -15,9 +15,11 @@ set REQUESTS_CA_BUNDLE=C:\cert\cacert_and_untangle_tw_root_authority.crt
 # =============================================================================
 
 # activates Visual Studio Developer Env variables in current session.
-function vsdev { & "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" }
-function vsdev22 { & "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" }
-function vsdev19 { & "C:\Program Files\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat" }
+function vsdev { cmd /k "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" }
+function vsdev22 { cmd /k "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" }
+function vsdev19 { cmd /k "C:\Program Files\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat" }
+
+#function vsdev { & "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\vsdevshell.bat" }
 
 
 # Define the file to store directory keys
