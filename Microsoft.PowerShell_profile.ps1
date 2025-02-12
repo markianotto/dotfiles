@@ -153,6 +153,9 @@ Set-Alias -Name al -Value ls
 
 Set-Alias -Name dn -Value dotnet
 
+function tail {
+   Get-Content -Wait -Tail 20 @args
+}
 
 function las {
    Get-ChildItem | Select-Object Name, @{Name="Size (MB)"; Expression={[math]::Round($_.Length / 1MB, 2)}} | Format-Table -AutoSize
