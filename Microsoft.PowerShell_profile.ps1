@@ -1,3 +1,5 @@
+$env:POWERSHELL_TELEMETRY_OPTOUT=1
+
 #oh-my-posh init pwsh | Invoke-Expression
 $env:VISUAL = "nvim"
 $env:EDITOR = "nvim"
@@ -98,6 +100,27 @@ if (Get-Command nvim -ErrorAction SilentlyContinue) {
 } else {
    Write-Error "You don't have neovim installed. You probably should do that."
 }
+
+function br {
+  $args = $args -join ' '
+  $cmd_file = New-TemporaryFile
+
+  $process = Start-Process -FilePath 'C:/bin/broot.exe' `
+                           -ArgumentList "--outcmd $($cmd_file.FullName) $args" `
+                           -NoNewWindow -PassThru -WorkingDirectory $PWD
+
+  Wait-Process -InputObject $process #Faster than Start-Process -Wait
+  If ($process.ExitCode -eq 0) {
+    $cmd = Get-Content $cmd_file
+    Remove-Item $cmd_file
+    If ($cmd -ne $null) { Invoke-Expression -Command $cmd }
+  } Else {
+    Remove-Item $cmd_file
+    Write-Host "`n" # Newline to tidy up broot unexpected termination
+    Write-Error "broot.exe exited with error code $($process.ExitCode)"
+  }
+}
+
 
 
 function btop {
@@ -351,3 +374,12 @@ function days-since-epoch {
 }
 
 
+# Import the Chocolatey Profile that contains the necessary code to enable
+# tab-completions to function for `choco`.
+# Be aware that if you are missing these lines from your profile, tab completion
+# for `choco` will not function.
+# See https://ch0.co/tab-completion for details.
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}
