@@ -1,6 +1,6 @@
-#[shell]
-#args = ['--login']
-#program = "/usr/bin/fish"
+[shell]
+args = ['-NoLogo']
+program = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
 
 [cursor]
 style = "Beam"

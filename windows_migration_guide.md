@@ -70,3 +70,6 @@ choco install 7zip androidstudio filezilla firefox git gimp irfanview krita node
       XML
       XML Tools
    ```
+11. make a link to `aladmin_starter.exe` in `C:\ProgramData\Microsoft\Windows\Start Menu\Programs`. This launches alacritty as an administrator. Making a similar link to alacritty.exe for some reason conflicts with the normal alacritty shortcut.
+
+12. rename `Alacritty/Alacritty.lnk` to `aluser.lnk`, makes it easier to type.
