@@ -106,5 +106,31 @@
    "editor.cursorBlinking": "solid",
    "window.density.editorTabHeight": "compact",
    "files.autoSave": "afterDelay",
-   "window.newWindowDimensions": "maximized"
+   "window.newWindowDimensions": "maximized",
+   "mssql.objectExplorer.groupBySchema": true,
+   "mssql.connections": [
+      {
+         "connectionString": "Microsoft.SqlTools|itemtype:Profile|server:tcp:20.163.133.116,1433|db:vault2|user:token_dev|isConnectionString:true",
+         "database": "vault2",
+         "user": "token_dev",
+         "server": "tcp:20.163.133.116,1433",
+         "authenticationType": "SqlLogin",
+         "savePassword": true,
+         "password": ""
+      },
+      {
+         "connectionString": "Microsoft.SqlTools|itemtype:Profile|server:tcp:idsentry2-replicant-db-server.database.windows.net,1433|user:tokendev|isConnectionString:true",
+         "database": "",
+         "user": "tokendev",
+         "server": "tcp:idsentry2-replicant-db-server.database.windows.net,1433",
+         "authenticationType": "SqlLogin",
+         "savePassword": true,
+         "password": ""
+      }
+   ],
+   "[csharp]": {
+      "editor.defaultFormatter": "ms-dotnettools.csharp"
+   },
+   "markdown.preview.scrollEditorWithPreview": false,
+   "markdown.preview.scrollPreviewWithEditor": false
 }
