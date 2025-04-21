@@ -81,6 +81,48 @@ function go {
     }
 }
 
+function ncdu {
+   dua i $args
+}
+
+
+function check_dotnet_sdk {
+    Write-Host "`nChecking installed .NET SDKs for updates..." -ForegroundColor Cyan
+    $installedSdks = & dotnet --list-sdks | ForEach-Object {
+        ($_ -split '\s+')[0]
+    } | Sort-Object -Unique
+
+    $sdkGroups = $installedSdks | Group-Object { ($_ -split '\.')[0..1] -join '.' }
+
+    foreach ($group in $sdkGroups) {
+        $channel = $group.Name
+        $releasesUrl = "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/$channel/releases.json"
+
+        try {
+            $releases = Invoke-RestMethod -Uri $releasesUrl -UseBasicParsing
+            $latest = $releases.'latest-sdk'
+
+            $installedInChannel = $group.Group
+            if ($installedInChannel -notcontains $latest) {
+                Write-Host "`n============================================" -ForegroundColor Red
+                Write-Host "`nWARNING! $channel SDK: Out-of-Date ($latest)" -ForegroundColor Red
+                Write-Host "`n $channel SDK:"
+                Write-Host "   Installed: $($installedInChannel -join ', ')"
+                Write-Host "   Latest:    $latest" -ForegroundColor Yellow
+                Write-Host "`n============================================" -ForegroundColor Red
+            } else {
+                Write-Host "`n============================================" -ForegroundColor Green
+                Write-Host "`n $channel SDK: Up to date ($latest)" -ForegroundColor Green
+                Write-Host "`n============================================" -ForegroundColor Green
+            }
+        } catch {
+            Write-Host "`nFailed to fetch metadata for $channel SDK" -ForegroundColor Red
+        }
+    }
+}
+
+
+
 function sha256sum {
     param (
         [Parameter(Mandatory=$true)]
@@ -195,7 +237,7 @@ function dev {
    )
    switch ($inputString) {
       "sync:devops" {
-         cd 'C:\code\sync\sync-dev-ops';
+         cd 'C:\code\sync\dev-ops';
          code ./;
          npm run electron:dev;
       }
