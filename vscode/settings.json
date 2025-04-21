@@ -88,7 +88,7 @@
    "workbench.layoutControl.enabled": false,
    "window.dialogStyle": "custom",
    "window.menuBarVisibility": "toggle",
-   "editor.fontFamily": "'Droid Sans Mono', monospace",
+   "editor.fontFamily": "'ComicShannsMono Nerd Font', Consolas, 'Courier New', monospace",
    "editor.fontSize": 16,
    "editor.unicodeHighlight.nonBasicASCII": false,
    "extensions.ignoreRecommendations": true,
@@ -132,5 +132,15 @@
       "editor.defaultFormatter": "ms-dotnettools.csharp"
    },
    "markdown.preview.scrollEditorWithPreview": false,
-   "markdown.preview.scrollPreviewWithEditor": false
+   "markdown.preview.scrollPreviewWithEditor": false,
+   "editor.codeLensFontFamily": "'ComicShannsMono Nerd Font', Consolas, 'Courier New', monospace",
+   "editor.inlayHints.fontFamily": "'ComicShannsMono Nerd Font', Consolas, 'Courier New', monospace",
+   "scm.inputFontFamily": "'ComicShannsMono Nerd Font', Consolas, 'Courier New', monospace",
+   "terminal.integrated.fontFamily": "'ComicShannsMono Nerd Font', Consolas, 'Courier New', monospace",
+   "debug.console.fontFamily": "'ComicShannsMono Nerd Font', Consolas, 'Courier New', monospace",
+   "notebook.markup.fontFamily": "'ComicShannsMono Nerd Font', Consolas, 'Courier New', monospace",
+   "notebook.output.fontFamily": "'ComicShannsMono Nerd Font', Consolas, 'Courier New', monospace",
+   "chat.editor.fontFamily": "'ComicShannsMono Nerd Font', Consolas, 'Courier New', monospace",
+   "mssql.resultsFontFamily": "'ComicShannsMono Nerd Font', Consolas, 'Courier New', monospace",
+   "chat.editor.fontWeight": "'ComicShannsMono Nerd Font', Consolas, 'Courier New', monospace"
 }
