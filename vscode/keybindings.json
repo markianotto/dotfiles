@@ -643,6 +643,10 @@
         "key": "alt+; f",
         "command": "editor.action.formatChanges"
     },
+    {
+        "key": "ctrl+k shift+j",
+        "command": "editor.action.joinLines"
+    },
     
     /*{
         "key": "alt+p d",
